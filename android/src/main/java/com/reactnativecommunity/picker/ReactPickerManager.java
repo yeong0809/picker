@@ -237,7 +237,8 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
 
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
-      return getView(position, convertView, parent, true);
+      parent.setPadding(0, 0, 0, 0);
+      return convertView;
     }
 
     private View getView(int position, View convertView, ViewGroup parent, boolean isDropdown) {
